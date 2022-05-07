@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <h1>SIP Calculator</h1>
+    <div class="calculatorContainer">
+        <div class="userWrapper">
+            <div class="sipRow">
+                <p class="type">Monthly investment</p>
+                <div class="formInput input-group">
+                    <span class="input-group-text">Rs</span>
+                    <input type="text" id="investmentAmount" class="form-control" placeholder="500" aria-label="Username"
+                        aria-describedby="basic-addon1" onchange="getAmount()">
+                </div>
+            </div>
+            <div class="sipRow">
+                <input type="range" class="form-range" min="500" max="100000" step="500" id="investmentRange">
+            </div>
+            <div class="sipRow">
+                <p class="type">Expected return rate (p.a)</p>
+                <div class="formInput input-group">
+                    <input type="text" id="returnText" class="form-control" placeholder="8" aria-label="Username"
+                        aria-describedby="basic-addon1" onchange="getReturn()">
+                    <span class="input-group-text">%</span>
+                </div>
+            </div>
+            <div class="sipRow">
+                <input type="range" class="form-range" min="8" max="30" step="0.5" id="expectedReturn">
+            </div>
+            <div class="sipRow">
+                <p class="type">Time period</p>
+                <div class="formInput input-group">
+                    <input type="text" id="yearInp" class="form-control" placeholder="10" aria-label="Username"
+                        aria-describedby="basic-addon1" onchange="getYears()">
+                    <span class="input-group-text">years</span>
+                </div>
+            </div>
+            <div class="sipRow">
+                <input type="range" class="form-range" min="1" max="30" step="1" id="yearSlider">
+            </div>
+        </div>
+        <div class="calculatedWrapper">
+            <div class="resultWrapper">
+                <div class="result">
+                    <p class="resultRow investedAmount">Invested Amount</p>
+                    <div class="rupeeAmount">
+                        <span class="material-icons rupeeIconForInvestment">currency_rupee</span>
+                        <p class="resultRow iAmount">100000</p>
+                    </div>
+                </div>
+                <div class="result">
+                    <p class="resultRow estimatedReturn">Est. returns</p>
+                    <div class="rupeeAmount">
+                        <span class="material-icons rupeeAmountForEstimation">currency_rupee</span>
+                        <p class="resultRow eAmount">100000</p>
+                    </div>
+                </div>
+                <div class="result">
+                    <p class="resultRow totalReturn">Total Value</p>
+                    <div class="rupeeAmount">
+                        <span class="material-icons rupeeAmountForReturn">currency_rupee</span>
+                        <p class="resultRow rAmount"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

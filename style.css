@@ -1,0 +1,148 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+}
+
+h1 {
+    color: white;
+    margin-bottom: 50px;
+    text-align: left;
+}
+
+.calculatorContainer {
+    height: 80vh;
+    width: 80vw;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.type {
+    margin-top: 5px;
+    font-size: 25px;
+    color: white;
+}
+.sipRow {
+    display: flex;
+    width: 100%;
+    height: 10%;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.formInput {
+    width: 40%;
+}
+.userWrapper {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.calculatedWrapper {
+    border-radius: 5px;
+    width: 45%;
+    background-color: rgb(235, 241, 243);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.resultRow {
+    margin: 0px 0px;
+}
+
+.investedAmount {
+    font-size: 20px;
+    font-weight: bold;
+}
+.estimatedReturn {
+    font-size: 25px;
+    font-weight: bold;
+}
+.totalReturn {
+    font-size: 35px;
+    font-weight: bolder;
+}
+.iAmount {
+    font-size: 20px;
+    color: red;
+}
+.eAmount {
+    font-size: 25px;
+    font-weight: bold;
+    color: orange;
+}
+.rAmount {
+    font-size: 35px;
+    font-weight: bold;
+    color: green;
+}
+.result {
+    margin: 10px 0px;
+}
+.rupeeIconForInvestment {
+    font-size: 20px;
+    margin-top: 3px;
+    color: red;
+}
+.rupeeAmountForEstimation {
+    /* font-size: 25px; */
+    margin-top: 8px;
+    color: orange;
+    /* font-weight: bold; */
+}
+.rupeeAmountForReturn {
+    /* font-size: 25px; */
+    margin-top: 18px;
+    color: green;
+    /* font-weight: bold; */
+}
+.rupeeAmount {
+    display: flex;
+}
+@media screen and (max-width: 450px) {
+    .calculatorContainer {
+        height: 80vh;
+        width: 100vw;
+        border: 1px solid black;
+        border-radius: 5px;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    .userWrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+    }
+    .type {
+        margin-top: 5px;
+        font-size: 15px;
+        color: white;
+    }
+
+    .calculatedWrapper {
+        border-radius: 5px;
+        width: 100%;
+        background-color: rgb(235, 241, 243);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+}
